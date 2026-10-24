@@ -1,0 +1,14 @@
+# The app still uses every field the site's frame gives it. Daily, and on every push.
+name: frame-check
+on:
+  push:
+  schedule: [{ cron: "23 6 * * *" }]
+  workflow_dispatch:
+jobs:
+  frame:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: node worker/test/frame-coverage.mjs
