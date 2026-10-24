@@ -7,9 +7,9 @@ straight from this repo — the `wrangler.jsonc` at the repo root is the whole c
 
 ## Live
 
-`https://spelunking-agent.jared-01a.workers.dev`
+`https://spelunking.ai/polderchain` (its workers.dev hostname is switched off)
 
-Deployed 2026-09-24. `GET /health` reports which reasoner is configured and whether the KV
+Builds from `main` of this repo through Cloudflare Workers Builds. `GET /polderchain/health` reports which reasoner is configured and whether the KV
 namespace and the forwarding key are bound — check it first when something looks wrong.
 
 ## What it does
